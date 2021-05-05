@@ -32,3 +32,20 @@ document.querySelector('#ts-2').addEventListener('click', function () {
     document.querySelector('#result-2-max').innerText = 'Maximal: '+ maxNum;
     document.querySelector('#result-2-diff').innerText = 'Difference: '+ (maxNum - minNum);
 });
+
+document.querySelector('#ts-3').addEventListener('click', function () {
+    const numsArr = [];
+    let odds = 0;
+    let evens = 0;
+
+    for (let i=0; i<30; i++) {
+        let newNum = Math.floor(Math.random(1000) * 1000);
+        numsArr.push(newNum);        
+        if (newNum %2 == 0) evens++;
+        else odds++;
+    }
+
+    document.querySelector('#arr-3').innerText = 'The Array: '+numsArr;
+    document.querySelector('#result-3-odd').innerText = 'Odds qty: '+ odds;
+    document.querySelector('#result-3-even').innerText = 'Evens qty: '+ evens;
+});
